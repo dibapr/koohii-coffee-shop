@@ -1,0 +1,33 @@
+* {
+  font-family: "Encode Sans", sans-serif;
+}
+
+.back-button {
+  margin-left: 3vw;
+  margin-top: 3vh;
+  max-width: fit-content;
+}
+
+.back-button a {
+  color: rgb(49, 49, 49);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.form-container {
+  padding: 5vh 30vw 20vh;
+  margin-top: 7vh;
+}
+
+.form-container h1 {
+  font-weight: 700;
+  color: #361500;
+}
+
+.error {
+  color: red;
+}
+
+.hasilcontainer {
+  color: #361500;
+}
