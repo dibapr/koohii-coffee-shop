@@ -8,18 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <script src="../js/navbar.js"></script>
-    <script src="../js/formKontak.js"></script>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/navbar.js"></script>
+    <script src="js/formKontak.js"></script>
     <title>Koohii Coffee Shop</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
             <a id="coklat" class="navbar-brand" href="home.php">
-                <img src="../assets/logo.png" width="100" height="60" alt="">
+                <img src="assets/logo.png" width="100" height="60" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,13 +48,13 @@
     <div id="carouselExampleSlidesOnly" class="carousel none slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-                <img src="../assets/11.jpg" class="d-block w-100" alt="...">
+                <img src="assets/11.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="../assets/22.jpg" class="d-block w-100" alt="...">
+                <img src="assets/22.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-                <img src="../assets/33.jpg" class="d-block w-100" alt="...">
+                <img src="assets/33.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
     </div>
@@ -63,18 +63,25 @@
             <h1>SELAMAT DATANG DI WEB KOOHII</h1>
             <center><p>Temukan informasi mengenai coffee shop Koohii disini.</p></center>
         </div>
-        <div class="tombol">
-            <div class="subs-container">
-                <a href="subs.php" class="subs">Berlangganan</a>
+        <div class="tombol text-center">
+            <div class="row row-lg row-md">
+                <div class="order-container col mb-lg-2 mb-md-2 mb-2">
+                    <a href="order.php" class="order">Pesan Kopi</a>
+                </div>
             </div>
-            <div class="logout-container">
-                <a href="index.php" class="logout">Logout</a>
+            <div class="row row-lg row-md d-xs-grid gap-2">
+                <div class="subs-container col mb-xs-2">
+                    <a href="subs.php" class="subs bg-primary">Berlangganan</a>
+                </div>
+                <div class="logout-container col">
+                    <a href="login.php" class="logout">Logout</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="tentang" id="tentang">
+    <div class="tentang px-5" id="tentang">
         <div class="gmbr">
-            <img src="../assets/cewe.png" alt="" class="cewe">
+            <img src="assets/cewe.png" alt="" class="cewe">
         </div>
         <div class="head col-lg-3 col-md-6">
             <h1 class="text-lg-start text-md-center">Tentang Kami</h1>
@@ -90,7 +97,7 @@
             <div class="row col-7 row-cols-1 row-cols-lg-3 row-cols-md-1 g-4 justify-content-center align-items-center">
                 <div class="col">
                     <div class="card">
-                        <img src="../assets/111.jpg" class="card-img-top" alt="...">
+                        <img src="assets/111.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Espresso</h5>
                             <p class="card-text">Ekstrak biji kopi yang diproses menggunakan mesin bertekanan tinggi. Bisa dibilang saripati biji kopi yang murni.</p>
@@ -99,7 +106,7 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="../assets/222.jpg" class="card-img-top" alt="...">
+                        <img src="assets/222.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Cappucino</h5>
                             <p class="card-text">Terdiri dari sepertiga espresso, sepertiga susu dan sepertiga froth susu. Tidak memiliki art diatas busanya.</p>
@@ -108,7 +115,7 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="../assets/333.jpg" class="card-img-top" alt="...">
+                        <img src="assets/333.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Americano</h5>
                             <p class="card-text">Espresso yang dicampurkan air panas sehingga rasa espresso yang pahit tidak terlalu mencolok.</p>
@@ -117,7 +124,7 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="../assets/444.jpg" class="card-img-top" alt="...">
+                        <img src="assets/444.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Mocha</h5>
                             <p class="card-text">Memiliki campuran yaitu espresso, susu, dan coklat sehingga rasa yang diciptakan ialah rasa manis dan aroma kopi.</p>
@@ -126,7 +133,7 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="../assets/555.jpg" class="card-img-top" alt="...">
+                        <img src="assets/555.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Latte</h5>
                             <p class="card-text">Lebih menonjolkan rasa kopinya ketimbang rasa susunya. Memiliki tiga layer, yaitu foam, susu, dan kopi.</p>
@@ -135,7 +142,7 @@
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="../assets/666.jpg" class="card-img-top" alt="...">
+                        <img src="assets/666.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Macchiato</h5>
                             <p class="card-text">Merupakan minuman dengan perpaduan antara espresso dan susu. Takaran antara espresso dan susu 1:1 alias sama banyaknya</p>
@@ -145,7 +152,7 @@
             </div>
         </div>
     </div>
-    <div id="alasan" class="alasan-container d-flex flex-lg-row flex-md-column justify-content-evenly align-items-center">
+    <div id="alasan" class="alasan-container d-flex flex-lg-row flex-md-column justify-content-evenly align-items-center px-5">
         <div class="mengapa col-lg-2 col-md-5">
             <h1>Mengapa harus memilih kami?</h1>
             <p>Berikut adalah alasan mengapa Koohii Coffee Shop merupakan tempat yang terbaik untuk menikmati secangkir kopi.</p>
@@ -204,15 +211,15 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item itemitem active" data-bs-interval="3000">
-                    <h5 class="miring">"Kalo dari kata-katanya sih, ini Koohii kayanya seru nih buat nongkrong. Soalnya pas gue lewat tuh, dari tampak depan udah menarik pandangan banget. dan pas masuk ke dalam, dengan pemandangan mural ditemboknya, kayanya sih fix ini seru."</h5>
+                    <h5 class="miring fs-6">"Kalo dari kata-katanya sih, ini Koohii kayanya seru nih buat nongkrong. Soalnya pas gue lewat tuh, dari tampak depan udah menarik pandangan banget. dan pas masuk ke dalam, dengan pemandangan mural ditemboknya, kayanya sih fix ini seru."</h5>
                     <p>Mamang Kesbor</p>
                 </div>
                 <div class="carousel-item itemitem" data-bs-interval="3000">
-                    <h5 class="miring">"Salah satu cafe yang enak buat nongkrong, rasa makanan disini enak dan kopi nya pun mantap, harga nya tidak terlalu mahal, tempat nya nyaman dan cozy, recommended. Cocok buat mahasiswa yang mau ngerjain tugas dan pekerja yang mau produktif."</h5>
+                    <h5 class="miring fs-6">"Salah satu cafe yang enak buat nongkrong, rasa makanan disini enak dan kopi nya pun mantap, harga nya tidak terlalu mahal, tempat nya nyaman dan cozy, recommended. Cocok buat mahasiswa yang mau ngerjain tugas dan pekerja yang mau produktif."</h5>
                     <p>Anjasmara</p>
                 </div>
                 <div class="carousel-item itemitem" data-bs-interval="3000">
-                    <h5 class="miring">"Kedai kopi pertama yang saya kunjungi selama saya tinggal dan saya terus kembali. Staf sangat ramah dan harga kopi luar biasa. Ada Wifi dan tempat duduk yang indah. Yang paling keren adalah seni Latte yang mengejutkan saya ketika saya memesan."</h5>
+                    <h5 class="miring fs-6">"Kedai kopi pertama yang saya kunjungi selama saya tinggal dan saya terus kembali. Staf sangat ramah dan harga kopi luar biasa. Ada Wifi dan tempat duduk yang indah. Yang paling keren adalah seni Latte yang mengejutkan saya ketika saya memesan."</h5>
                     <p>Abang Balaraja</p>
                 </div>
             </div>
@@ -226,14 +233,14 @@
             </button>
         </div>
     </div>
-    <div id="kontak" class="kontak-container">
+    <div id="kontak" class="kontak-container px-5">
         <h1 class="text-center">Kontak</h1>
         <p class="text-center jarak">Punya kritik dan saran atau pesan yang ingin disampaikan? Hubungi kami.</p>
         <div class="kontak d-flex justify-content-evenly align-items-center flex-wrap">
             <div class="maps-container">
                 <h3 class="text-md-center warna" style="color: #361500;">Alamat kami</h3>
                 <p class="text-md-center warna">Jangan lupa untuk memberi kunjungan ke coffee shop kami.</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.517963712404!2d106.81825251543205!3d-6.195180095515057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f421c2ebd463%3A0xccfcc89b95aaf1ae!2sGrand%20Indonesia!5e0!3m2!1sid!2sid!4v1646835446010!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.517963712404!2d106.81825251543205!3d-6.195180095515057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f421c2ebd463%3A0xccfcc89b95aaf1ae!2sGrand%20Indonesia!5e0!3m2!1sid!2sid!4v1646835446010!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="form-container">
                 <form name="form" id="form">
@@ -298,14 +305,14 @@
         </div>
     </div>
     <div class="footer-container">
-        <div class="menu-container d-flex justify-content-evenly flex-lg-row flex-md-column text-lg-start text-md-center">
-            <img class="mb-md-5 align-self-center" src="../assets/logo.png" alt="" width="150" height="90">
+        <div class="menu-container d-flex justify-content-evenly flex-lg-row flex-md-column flex-sm-wrap text-lg-start text-md-center text-sm-center">
+            <img class="mb-md-5 align-self-center" src="assets/logo.png" alt="" width="150" height="90">
             <div class="touch col-lg-2 mb-md-5">
                 <h5>Hubungi Kami</h5>
-                <p>Jl. M.H. Thamrin No.1, Kb. Melati, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310</p>
+                <p class="px-5 px-lg-0">Jl. M.H. Thamrin No.1, Kb. Melati, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10310</p>
                 <p>Call: +62 813 5610 8992</p>
             </div>
-            <div class="menu mb-md-5">
+            <div class="menu mb-md-5 mb-3">
                 <h5>Menu</h5>
                 <a href="#tentang">Tentang</a>
                 <a href="#kopi">Kopi</a>
@@ -313,12 +320,16 @@
                 <a href="#testi">Testimoni</a>
                 <a href="#kontak">Kontak</a>
             </div>
-            <div class="subs-cta mb-md-5">
-                <h5>Ikuti Update Kami</h5>
-                <a class="btn btn-primary langganan" href="subs.php" role="button">Berlangganan</a>
+            <div>
+                <h5>Pesan Kopi</h5>
+                <a href="php/order.php" class="btn btn-primary pesen mb-lg-0 mb-4" role="button">Pesan</a>
             </div>
+            <div class="subs-cta mb-md-5 mg-lg-0 mt-lg-0 mt-md-5 mb-5">
+                <h5>Ikuti Update Kami</h5>
+                <a class="btn btn-primary" href="subs.php" role="button">Berlangganan</a>
+            </div>  
         </div>
-        <div class="sosmed container mb-md-5">
+        <div class="sosmed container mb-md-5 mb-5">
             <div class="isi-sosmed">
                 <div class="gambar-sosmed d-flex justify-content-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-facebook me-3 ms-3" viewBox="0 0 16 16">
@@ -337,12 +348,9 @@
             </div>
         </div>
         <div class="copyright d-flex justify-content-center">
-            <?php
-                $nama = "Diba";
-            ?>
             <p class="love">Copyright &#169;2022 | Made with <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-            </svg> by <?= $nama ?></p>
+            </svg> by Diba</p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

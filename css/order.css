@@ -1,0 +1,19 @@
+* {
+font-family: "Encode Sans", sans-serif;
+}
+
+.back-button {
+  margin-left: 3vw;
+  margin-top: 3vh;
+  max-width: fit-content;
+}
+
+.back-button a {
+  color: rgb(49, 49, 49) !important;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.merah {
+    color: red;
+}
