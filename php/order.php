@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["login"])) {
+        header("Location: login.php");
+        exit;
+    }
+?>
+
+<?php
     $errorNama = "Anda belum memasukkan nama.";
     $errorMenu = "Anda belum memilih menu.";
     $errorUkuran = "Anda belum memilih ukuran cup.";

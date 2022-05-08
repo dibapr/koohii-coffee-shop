@@ -1,4 +1,12 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["login"])) {
+        header("Location: login.php");
+        exit;
+    }
+?>
+
+<?php
     if(isset($_POST["submit"])) {
         $namadepan = $_POST["namadepan"];
         $namabelakang = $_POST["namabelakang"];
