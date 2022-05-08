@@ -46,12 +46,12 @@
 }
 
 .order {
-  background-color: #cc9544 !importan;
-  color: white !importan;;
-  padding: 1em 2em !importan;
-  transition-duration: 0.3s !importan;;
-  border-radius: 10px !importan;
-  display: block !importan;
+  background-color: #cc9544 !important;
+  color: white !important;
+  padding: 1em 2em !important;
+  transition-duration: 0.3s !important;
+  border-radius: 10px !important;
+  display: block !important;
 }
 
 .order:hover {
