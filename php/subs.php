@@ -42,7 +42,7 @@
 </head>
 <body>
     <div class="back-button">
-        <a href="home.php"><i class="bi bi-arrow-90deg-left"></i>   Kembali</a>
+        <a href="index.php"><i class="bi bi-arrow-90deg-left"></i>   Kembali</a>
     </div>
     <div class="form-container">
         <div class="head">
