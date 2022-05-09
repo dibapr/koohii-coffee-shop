@@ -330,7 +330,7 @@
             </div>
             <div>
                 <h5>Pesan Kopi</h5>
-                <a href="php/order.php" class="btn btn-primary pesen mb-lg-0 mb-4" role="button">Pesan</a>
+                <a href="order.php" class="btn btn-primary pesen mb-lg-0 mb-4" role="button">Pesan</a>
             </div>
             <div class="subs-cta mb-md-5 mg-lg-0 mt-lg-0 mt-md-5 mb-5">
                 <h5>Ikuti Update Kami</h5>
