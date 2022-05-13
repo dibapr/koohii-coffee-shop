@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="form container col-lg-3 col-md-6 col-8 mt-lg-0 mt-3">
+      <div class="form container col-lg-3 col-md-6 col-8 mt-lg-0 mt-5 mb-lg-0 mb-md-0 mb-5">
         <form method="POST">
           <div class="head text-center">
             <img src="../assets/logo.png" width="50%" alt=""> 

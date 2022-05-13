@@ -72,13 +72,13 @@
                             <div class="form-check me-3">
                                 <input class="form-check-input" type="radio" name="ukuran" id="flexRadioDefault1" value="M">
                                     <label class="form-check-label">
-                                        M
+                                        M <i>(+Rp.2500)</i>
                                     </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="ukuran" id="flexRadioDefault2" value="L">
                                     <label class="form-check-label" for="ukuran">
-                                        L
+                                        L <i>(+Rp.5000)</i>
                                     </label>
                             </div>
                             <div class="form-check me-3">
@@ -180,46 +180,123 @@
                         <?php
                             if($menu == "Espresso") {
                                 $harga = 20000;
-                                $jumlah = (int)$_POST["jumlah"]; ?>
-                                <div id="harga">
-                                    <center><label for="">Total harga:</label></center>
-                                    <center><h5><?= "Rp." . $harga * $jumlah ?> </h5></center>
-                                </div>
+                                $jumlah = (int)$_POST["jumlah"];
+                                if($_POST["ukuran"] == "R") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah ?> </h5></center>
+                                    </div>
+                            <?php } elseif($_POST["ukuran"] == "M") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                    </div>
+                            <?php } elseif($_POST["ukuran"] == "L") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                    </div>
+                            <?php } ?>
+                                
                         <?php } elseif($menu == "Cappucino") {
                                     $harga = 25000;
-                                    $jumlah = (int)$_POST["jumlah"]; ?>
+                                    $jumlah = (int)$_POST["jumlah"]; 
+                                    if($_POST["ukuran"] == "R") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
                                         <center><h5><?= "Rp." . $harga * $jumlah ?> </h5></center>
                                     </div>
+                            <?php } elseif($_POST["ukuran"] == "M") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                    </div>
+                            <?php } elseif($_POST["ukuran"] == "L") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                    </div>
+                            <?php } ?>
+
                         <?php } elseif($menu == "Americano") {
                                     $harga = 25000;
-                                    $jumlah = (int)$_POST["jumlah"]; ?>
+                                    $jumlah = (int)$_POST["jumlah"];
+                                    if($_POST["ukuran"] == "R") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
                                         <center><h5><?= "Rp." . $harga * $jumlah ?> </h5></center>
                                     </div>
+                            <?php } elseif($_POST["ukuran"] == "M") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                    </div>
+                            <?php } elseif($_POST["ukuran"] == "L") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                    </div>
+                            <?php } ?>
+
                         <?php } elseif($menu == "Mocha") {
                                     $harga = 22000;
-                                    $jumlah = (int)$_POST["jumlah"]; ?>
+                                    $jumlah = (int)$_POST["jumlah"];
+                                    if($_POST["ukuran"] == "R") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
                                         <center><h5><?= "Rp." . $harga * $jumlah ?> </h5></center>
                                     </div>
+                            <?php } elseif($_POST["ukuran"] == "M") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                    </div>
+                            <?php } elseif($_POST["ukuran"] == "L") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                    </div>
+                            <?php } ?>
+
                         <?php } elseif($menu == "Latte") {
                                     $harga = 25000;
-                                    $jumlah = (int)$_POST["jumlah"]; ?>
+                                    $jumlah = (int)$_POST["jumlah"];
+                                    if($_POST["ukuran"] == "R") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
                                         <center><h5><?= "Rp." . $harga * $jumlah ?> </h5></center>
                                     </div>
+                            <?php } elseif($_POST["ukuran"] == "M") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                    </div>
+                            <?php } elseif($_POST["ukuran"] == "L") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                    </div>
+                            <?php } ?>
+                            
                         <?php } elseif($menu == "Machiato") {
                                     $harga = 23000;
-                                    $jumlah = (int)$_POST["jumlah"]; ?>
+                                    $jumlah = (int)$_POST["jumlah"];
+                                    if($_POST["ukuran"] == "R") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
                                         <center><h5><?= "Rp." . $harga * $jumlah ?> </h5></center>
                                     </div>
+                            <?php } elseif($_POST["ukuran"] == "M") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                    </div>
+                            <?php } elseif($_POST["ukuran"] == "L") { ?>
+                                    <div id="harga">
+                                        <center><label for="">Total harga:</label></center>
+                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                    </div>
+                            <?php } ?>
                         <?php } ?>  
                     <?php } ?>
                     <?php
