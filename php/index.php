@@ -1,9 +1,5 @@
 <?php
     session_start();
-    if(!isset($_SESSION["login"])) {
-        header("Location: login.php");
-        exit;
-    }
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +15,7 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/kopi.png">
     <script src="../js/navbar.js"></script>
     <script src="../js/formKontak.js"></script>
     <title>Koohii Coffee Shop</title>
@@ -26,7 +23,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a id="coklat" class="navbar-brand" href="home.php">
+            <a id="coklat" class="navbar-brand" href="index.php">
                 <img src="../assets/logo.png" width="100" height="60" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,9 +78,16 @@
                 <div class="subs-container col mb-xs-2">
                     <a href="subs.php" class="subs bg-primary">Berlangganan</a>
                 </div>
-                <div class="logout-container col">
-                    <a href="logout.php" class="logout">Logout</a>
-                </div>
+                <?php
+                if(isset($_SESSION["login"])) { ?>
+                    <div class="logout-container col">
+                        <a href="logout.php" class="logout">Logout</a>
+                    </div>
+            <?php } else { ?>
+                    <div class="login-container col">
+                        <a href="login.php" class="login">Login</a>
+                    </div>
+            <?php } ?>
             </div>
         </div>
     </div>

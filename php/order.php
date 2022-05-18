@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/order.css">
     <script src="../js/order.js"></script>
+    <link rel="icon" href="../assets/kopi.png">
     <title>Pesan Kopi</title>
 </head>
 <body>
@@ -39,7 +40,7 @@
         <div class="form-container px-md-5 mb-md-5 mb-sm-5 mb-5">
             <div class="header">
                 <div class="head">
-                    <h1>Mau pesan kopi tapi gak mau antri?</h1>
+                    <h1 style="font-weight: 700; color: #361500;">Mau pesan kopi tapi gak mau antri?</h1>
                     <p>Sekarang pesan kopi bisa disini. Buat pesanan, tunggu, dan tinggal ambil, gak perlu antri.</p>
                 </div>
             </div>
@@ -53,12 +54,12 @@
                     <label for="menu">Pilih Menu</label>
                     <select name="menu" class="form-select mb-3" aria-label="Default select example">
                         <option value="" selected hidden>Pilih menu disini</option>
-                        <option name="1" value="Espresso">Espresso</option>
-                        <option name="2" value="Cappucino">Cappucino</option>
-                        <option name="3" value="Americano">Americano</option>
-                        <option name="4" value="Mocha">Mocha</option>
-                        <option name="5" value="Latte">Latte</option>
-                        <option name="6" value="Machiato">Machiato</option>
+                        <option name="1" value="Espresso">Espresso | Rp. 20.000,-</option>
+                        <option name="2" value="Cappucino">Cappucino | Rp. 25.000,-</option>
+                        <option name="3" value="Americano">Americano | Rp. 25.000,-</option>
+                        <option name="4" value="Mocha">Mocha | Rp. 22.000,-</option>
+                        <option name="5" value="Latte">Latte | Rp. 25.000,-</option>
+                        <option name="6" value="Machiato">Machiato | Rp. 23.000,-</option>
                     </select>
                     <div class="ukuran mb-3">
                         <label for="ukuran">Pilih Ukuran</label>
@@ -125,55 +126,58 @@
             <?php } ?>
                 
                 <div class="card-body">
-                    <!-- nampilin error -->
                     <?php
-                        if(empty($_POST["nama"])) {
-                            if(isset($errorNama)) { ?>
-                                <p class="merah"><?= $errorNama ?></p>
+                        if(isset($_POST["submit"])) {
+                            if(empty($_POST["nama"])) {
+                                if(isset($errorNama)) { ?>
+                                    <p class="merah"><?= $errorNama ?></p>
                         <?php } ?>
                     <?php } else { ?>
                                 <div id="nama">
                                     <label for="">Atas nama:</label>
                                     <h5><?= $_POST["nama"] ?></h5>
                                 </div>
-                <?php } ?> 
-
+                <?php }  
+                    }  ?>      
                     <?php
-                        if(empty($_POST["menu"])) {
-                            if(isset($errorMenu)) { ?>
-                                <p class="merah"><?= $errorMenu ?></p>
+                        if(isset($_POST["submit"])) {
+                            if(empty($_POST["menu"])) {
+                                if(isset($errorMenu)) { ?>
+                                    <p class="merah"><?= $errorMenu ?></p>
                         <?php } ?>
                     <?php } else { ?>
                                 <div id="menu">
                                     <label for="">Menu:</label>
                                     <h5><?= $_POST["menu"] ?></h5>
                                 </div>
-                <?php } ?>
-                           
+                <?php } 
+                    } ?>  
                     <?php
-                        if(empty($_POST["ukuran"])) {
-                            if(isset($errorUkuran)) { ?>
-                                <p class="merah"><?= $errorUkuran ?></p>
+                        if(isset($_POST["submit"])) {
+                            if(empty($_POST["ukuran"])) {
+                                if(isset($errorUkuran)) { ?>
+                                    <p class="merah"><?= $errorUkuran ?></p>
                         <?php } ?>
                     <?php } else { ?>
                                 <div id="ukuran">
                                     <label for="">Ukuran:</label>
                                     <h5><?= $_POST["ukuran"] ?></h5>
                                 </div>
-                <?php } ?>
-                    
+                <?php } 
+                    } ?>
                     <?php
-                        if(empty($_POST["jumlah"])) {
-                            if(isset($errorJumlah)) { ?>
-                                <p class="merah"><?= $errorJumlah ?></p>
+                        if(isset($_POST["submit"])) {
+                            if(empty($_POST["jumlah"])) {
+                                if(isset($errorJumlah)) { ?>
+                                    <p class="merah"><?= $errorJumlah ?></p>
                         <?php } ?>
                     <?php } else { ?>
                                 <div id="jumlah">
                                     <label for="">Jumlah:</label>
                                     <h5><?= $_POST["jumlah"] ?></h5>
                                 </div>
-                <?php } ?>
-                    
+                <?php } 
+                    } ?>
                     <?php
                         if(isset($_POST["submit"])) { 
                             $menu = $_POST["menu"]; ?>
@@ -189,12 +193,12 @@
                             <?php } elseif($_POST["ukuran"] == "M") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 2500) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } elseif($_POST["ukuran"] == "L") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 5000) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } ?>
                                 
@@ -209,12 +213,12 @@
                             <?php } elseif($_POST["ukuran"] == "M") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 2500) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } elseif($_POST["ukuran"] == "L") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 5000) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } ?>
 
@@ -229,12 +233,12 @@
                             <?php } elseif($_POST["ukuran"] == "M") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 2500) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } elseif($_POST["ukuran"] == "L") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 5000) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } ?>
 
@@ -249,12 +253,12 @@
                             <?php } elseif($_POST["ukuran"] == "M") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 2500) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } elseif($_POST["ukuran"] == "L") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 5000) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } ?>
 
@@ -269,12 +273,12 @@
                             <?php } elseif($_POST["ukuran"] == "M") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 2500) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } elseif($_POST["ukuran"] == "L") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 5000) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } ?>
                             
@@ -289,12 +293,12 @@
                             <?php } elseif($_POST["ukuran"] == "M") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 2500 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 2500) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } elseif($_POST["ukuran"] == "L") { ?>
                                     <div id="harga">
                                         <center><label for="">Total harga:</label></center>
-                                        <center><h5><?= "Rp." . $harga * $jumlah + 5000 ?> </h5></center>
+                                        <center><h5><?= "Rp." . (int)($harga + 5000) * $jumlah ?> </h5></center>
                                     </div>
                             <?php } ?>
                         <?php } ?>  
