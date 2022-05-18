@@ -46,12 +46,12 @@
 }
 
 .order {
-  background-color: #cc9544 !important;
-  color: white !important;
-  padding: 1em 2em !important;
-  transition-duration: 0.3s !important;
-  border-radius: 10px !important;
-  display: block !important;
+  background-color: #cc9544;
+  color: white;
+  padding: 1em 2em;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  display: block;
 }
 
 .order:hover {
@@ -70,6 +70,20 @@
 .subs:hover {
   background-color: #8ca6fd !important;
   color: white;
+}
+
+.login {
+  background-color: rgb(91, 194, 91);
+  color: white;
+  padding: 1em 2em;
+  transition-duration: 0.3s;
+  border-radius: 10px;
+  display: block;
+}
+
+.login:hover {
+  color: white;
+  background-color: rgb(122, 189, 122);
 }
 
 .logout {
